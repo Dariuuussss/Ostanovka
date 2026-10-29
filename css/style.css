@@ -1,3 +1,788 @@
+@font-face {
+    font-family: "Manrope";
+    src: url("../assets/fonts/manrope_regular.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Manrope";
+    src: url("../assets/fonts/Manrope-Medium.ttf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Manrope";
+    src: url("../assets/fonts/manrope_regular.ttf");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Manrope";
+    src: url("../assets/fonts/Manrope-Bold.ttf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Manrope";
+    src: url("../assets/fonts/manrope-extrabold.ttf");
+    font-weight: 800;
+}
+@font-face {
+    font-family: "Neucha";
+    src: url("../assets/fonts/Neucha-Regular.ttf");
+    font-weight: 400;
+}
+:root {
+    --color-bg: #f7f0e3;
+    --color-blue-dark: #153b5d;
+    --color-blue: #4ea7d4;
+    --color-green: #2f7f56;
+    --color-orange: #ff8a3d;
+    --color-yellow: #ffd55a;
+    --color-pink: #ff6fae;
+    --color-white: #ffffff;
+}
 body {
-    font-family: Arial, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-blue-dark);
+    font-family: "Manrope", sans-serif;
+}
+.footer {
+    min-height: 330px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 70px 5%;
+    background-color: var(--color-bg);
+    border-top: 2px solid var(--color-blue-dark);
+}
+.footer-brand {
+    width: 28%;
+}
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 35px;
+    width: 180px;
+    height: auto;
+}
+.footer-brand p {
+    font-size: 17px;
+    line-height: 1.5;
+    max-width: 320px;
+}
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.footer-column a {
+    font-size: 16px;
+}
+.footer-slogan {
+    font-family: "Neucha", cursive;
+    font-size: 26px;
+    line-height: 1.15;
+    font-weight: bold;
+    transform: rotate(-3deg);
+    color: var(--color-blue-dark);
+}
+.footer-slogan span {
+    color: var(--color-blue);
+}
+.hero {
+    min-height: 100vh;
+    background-image: url("../assets/images/hero-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 50px;
+    position: relative;
+    z-index: 10;
+}
+.logo {
+    opacity: 0;
+    width: 180px;
+    height: auto;
+    animation: hero-show 1.8s ease;
+    animation-fill-mode: forwards;
+}
+.header-button {
+    opacity: 0;
+    background-color: var(--color-blue-dark);
+    color: var(--color-white);
+    padding: 16px 28px;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: 0.3s;
+    animation: hero-show 1.8s ease;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+}
+.header-button:hover {
+    background-color: var(--color-orange);
+    transform: translateY(-3px);
+}
+.hero-content {
+    position: absolute;
+    left: 7%;
+    bottom: 6%;
+    z-index: 3;
+    width: 600px;
+}
+.hero-content h1 {
+    font-size: 76px;
+    line-height: 0.9;
+    margin-bottom: 25px;
+    color: var(--color-blue-dark);
+    animation: hero-show 1.8s ease;
+}
+.hero-content h1 span {
+    font-family: "Neucha", cursive;
+    display: block;
+}
+.hero-title-line1 {
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+.hero-title-line2 {
+    margin-left: 50px;
+}
+.hero-content p {
+    font-size: 22px;
+    line-height: 1.4;
+    margin-left: 120px;
+    margin-bottom: 30px;
+    animation: hero-show 1.8s ease;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+}
+.hero-button {
+    display: inline-block;
+    margin-left: 180px;
+    padding: 16px 28px;
+    background-color: var(--color-blue-dark);
+    color: var(--color-white);
+    border-radius: 30px;
+    font-size: 18px;
+    transition: 0.3s;
+    animation: hero-show 1.8s ease;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+}
+.hero-button:hover {
+    background-color: var(--color-orange);
+    transform: translateY(-3px);
+}
+.hero-link {
+    position: absolute;
+    color: var(--color-blue-dark);
+    font-size: 22px;
+    font-weight: bold;
+    background-color: var(--color-bg);
+    padding: 12px 20px;
+    border-radius: 25px;
+    transition: 0.3s;
+    animation: nav-float 3s ease-in-out infinite;
+}
+.hero-link:hover {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+}
+.hero-link-about {
+    top: 30%;
+    left: 53%;
+    animation-delay: 0s;
+}
+.hero-link-stops {
+    top: 22%;
+    left: 75%;
+    animation-delay: 0.5s;
+}
+.hero-link-events {
+    top: 42%;
+    left: 80%;
+    animation-delay: 1s;
+}
+.hero-link-merch {
+    top: 79%;
+    left: 57%;
+    animation-delay: 1.5s;
+}
+.about {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 8%;
+    background-color: var(--color-bg);
+}
+.about-text {
+    width: 40%;
+}
+.about-text h2 {
+    font-family: "Neucha", cursive;
+    font-size: 60px;
+    line-height: 1.1;
+    margin-bottom: 50px;
+}
+.about-text h2 span {
+    color: var(--color-blue);
+}
+.about-text p {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    max-width: 520px;
+}
+.about-button {
+    display: inline-block;
+    background-color: var(--color-blue-dark);
+    color: var(--color-white);
+    padding: 16px 28px;
+    border-radius: 30px;
+    font-size: 18px;
+}
+.about-image {
+    width: 50%;
+}
+.about-image img {
+    width: 100%;
+}
+.how {
+    min-height: 100vh;
+    background-image: url("../assets/images/how-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 70px 8%;
+}
+.how-title {
+    font-family: "Neucha", cursive;
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+.how-title span {
+    color: var(--color-blue);
+}
+.how-subtitle {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 45px;
+}
+.how-steps {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    gap: 25px;
+}
+.how-step {
+    width: 23%;
+}
+.how-step h3 {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.how-step p {
+    font-size: 17px;
+    line-height: 1.4;
+}
+.step-number {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+.blue {
+    background-color: var(--color-blue);
+}
+.pink {
+    background-color: var(--color-pink);
+}
+.green {
+    background-color: var(--color-green);
+}
+.yellow {
+    background-color: var(--color-yellow);
+}
+.stops {
+    min-height: 100vh;
+    padding: 70px 5%;
+    background-color: var(--color-bg);
+}
+.stops-title {
+    font-family: "Neucha", cursive;
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 70px;
+}
+.stops-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+.stop-card {
+    width: 19%;
+    transition: 0.3s;
+}
+.stop-card:hover {
+    transform: translateY(-10px);
+}
+.stop-card img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+.stop-card:hover img {
+    transform: scale(1.03);
+}
+.stop-card h3 {
+    font-size: 26px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.stop-card p {
+    font-size: 17px;
+    line-height: 1.4;
+}
+.stops-route {
+    width: 88%;
+    height: 90px;
+    margin: 0 auto 30px;
+    position: relative;
+}
+.route-wave {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.route-wave path {
+    fill: none;
+    stroke: var(--color-orange);
+    stroke-width: 8;
+    stroke-linecap: round;
+}
+.route-dot {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 4px solid var(--color-bg);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.blue-dot {
+    background-color: var(--color-blue);
+}
+.green-dot {
+    background-color: var(--color-green);
+}
+.pink-dot {
+    background-color: var(--color-pink);
+}
+.orange-dot {
+    background-color: var(--color-orange);
+}
+.yellow-dot {
+    background-color: var(--color-yellow);
+}
+.dot-1 {
+    left: 3%;
+    top: 50%;
+}
+.dot-2 {
+    left: 27%;
+    top: 35%;
+}
+.dot-3 {
+    left: 50%;
+    top: 73%;
+}
+.dot-4 {
+    left: 73%;
+    top: 30%;
+}
+.dot-5 {
+    left: 96%;
+    top: 48%;
+}
+.philosophy {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 7%;
+    background-color: var(--color-bg);
+}
+.philosophy-text {
+    width: 38%;
+}
+.philosophy-text h2 {
+    font-family: "Neucha", cursive;
+    font-size: 60px;
+    line-height: 1.1;
+    margin-bottom: 50px;
+}
+.philosophy-text h2 span {
+    color: var(--color-blue);
+}
+.philosophy-text p {
+    font-size: 21px;
+    line-height: 1.5;
+    margin-bottom: 55px;
+}
+.philosophy-slogan {
+    font-family: "Neucha", cursive;
+    font-size: 26px;
+    line-height: 1.2;
+    transform: rotate(-5deg);
+    width: 320px;
+}
+.line-1 {
+    margin-left: 0;
+}
+.line-2 {
+    margin-left: 35px;
+}
+.line-3 {
+    margin-left: 70px;
+}
+.philosophy-image {
+    width: 52%;
+}
+.philosophy-image img {
+    width: 100%;
+    border-radius: 70px 70px 0 0;
+}
+.slogan-underline {
+    width: 260px;
+    height: 10px;
+    background-color: var(--color-orange);
+    margin-top: 12px;
+    margin-left: 105px;
+    border-radius: 10px;
+    transform: rotate(-1deg);
+}
+.history {
+    min-height: 100vh;
+    padding: 55px 7%;
+    background-color: var(--color-bg);
+}
+.history-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+.history-title {
+    font-family: "Neucha", cursive;
+    width: 320px;
+    font-size: 60px;
+    line-height: 0.95;
+}
+.history-title span {
+    color: var(--color-blue);
+}
+.history-intro {
+    font-size: 22px;
+    line-height: 1.35;
+    margin-top: 15px;
+}
+.history-visual {
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+}
+.history-visual img {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+.history-route {
+    position: absolute;
+    width: 90%;
+    height: 140px;
+    left: 5%;
+    top: 40%;
+    z-index: 1;
+}
+.history-route path {
+    fill: none;
+    stroke: var(--color-orange);
+    stroke-width: 8;
+    stroke-dasharray: 15 15;
+    stroke-linecap: round;
+}
+.history-texts {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+.history-item {
+    width: 23%;
+}
+.history-number {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.history-item h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+.history-item p {
+    font-size: 16px;
+    line-height: 1.4;
+}
+.history-blue {
+    background-color: var(--color-blue);
+}
+.history-pink {
+    background-color: var(--color-pink);
+}
+.history-green {
+    background-color: var(--color-green);
+}
+.history-yellow {
+    background-color: var(--color-yellow);
+}
+.events {
+    min-height: 100vh;
+    padding: 70px 5%;
+    background-color: var(--color-bg);
+}
+.events-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 55px;
+}
+.events-heading {
+    width: 65%;
+}
+.events-heading h2 {
+    font-family: "Neucha", cursive;
+    font-size: 60px;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+.events-heading p {
+    font-size: 19px;
+    line-height: 1.5;
+    max-width: 750px;
+}
+.events-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.event-card {
+    width: 19%;
+    transition: 0.3s;
+}
+.event-card:hover {
+    transform: translateY(-8px);
+}
+.event-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    margin-bottom: 18px;
+    transition: 0.3s;
+}
+.event-card:hover img {
+    transform: scale(1.03);
+}
+.event-date {
+    font-family: "Neucha", cursive;
+    font-size: 17px;
+    color: var(--color-blue);
+    margin-bottom: 8px;
+}
+.event-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.event-tag {
+    display: inline-block;
+    padding: 7px 18px;
+    border-radius: 20px;
+    color: white;
+    font-size: 13px;
+    transition: 0.3s;
+}
+.event-card:hover .event-tag {
+    transform: translateX(5px);
+}
+.tag-blue {
+    background-color: var(--color-blue);
+}
+.tag-pink {
+    background-color: var(--color-pink);
+}
+.tag-yellow {
+    background-color: var(--color-yellow);
+    color: var(--color-blue-dark);
+}
+.tag-green {
+    background-color: var(--color-green);
+}
+.merch {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 7%;
+    background-color: var(--color-bg);
+}
+.merch-text {
+    width: 35%;
+}
+.merch-text h2 {
+    font-family: "Neucha", cursive;
+    font-size: 70px;
+    margin-bottom: 35px;
+}
+.merch-text p {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 45px;
+}
+.merch-line {
+    width: 180px;
+    height: 9px;
+    background-color: var(--color-orange);
+    border-radius: 10px;
+    margin-top: -20px;
+    margin-bottom: 35px;
+    transform: rotate(-2deg);
+}
+.merch-text h3 {
+    font-family: "Neucha", cursive;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: normal;
+    margin-top: 35px;
+    transform: rotate(-3deg);
+}
+.merch-image {
+    width: 58%;
+}
+.merch-image img {
+    width: 100%;
+    display: block;
+}
+.final-cta {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+    padding: 80px 0 80px 7%;
+    background-color: var(--color-bg);
+    background-image: url("../assets/images/final-bg.png");
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+.final-text {
+    width: 50%;
+    position: relative;
+    z-index: 2;
+}
+.final-text h2 {
+    font-family: "Neucha", cursive;
+    font-size: 56px;
+    line-height: 1;
+    margin-bottom: 35px;
+}
+.final-title-first {
+    color: var(--color-blue-dark);
+    white-space: nowrap;
+}
+.final-title-second {
+    color: var(--color-blue);
+}
+.final-text p {
+    width: 500px;
+    font-size: 21px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+.final-actions {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+.final-button {
+    display: inline-block;
+    padding: 16px 30px;
+    background-color: var(--color-blue-dark);
+    color: var(--color-white);
+    border-radius: 30px;
+    font-size: 18px;
+}
+.final-note {
+    font-family: "Neucha", cursive;
+    font-size: 22px;
+    line-height: 1.1;
+    transform: rotate(-7deg);
+    color: var(--color-blue-dark);
+}
+.final-ticket {
+    width: 50%;
+    margin-left: auto;
+    position: relative;
+    z-index: 2;
+}
+.final-ticket img {
+    width: 100%;
+    display: block;
+}
+
+@keyframes hero-show {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes nav-float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }

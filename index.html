@@ -2,12 +2,406 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Остановка</title>
+
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Остановка</h1>
+    <main>
+        <section class="hero" id="home">
+            <header class="header">
+                <a class="logo" href="#home">
+                    <img src="assets/images/logo-header.png" alt="Остановка">
+                </a>
+                <a class="header-button" href="#stops">
+                    Выбрать маршрут ->
+                </a>
+            </header>
+            <div class="hero-content">
+                <h1>
+                    <span class="hero-title-line1">КУДА</span>
+                    <span class="hero-title-line2">ДАЛЬШЕ?</span>
+                </h1>
+                <p>
+                    Пять направлений — <br>
+                    бесконечно много историй.
+                </p>
+                <a class="hero-button" href="#stops">
+                    Выбрать маршрут ->
+                </a>
+            </div>
+            <div class="hero-nav">
+                <a class="hero-link hero-link-about" href="#about">
+                    О проекте
+                </a>
+                <a class="hero-link hero-link-stops" href="#stops">
+                    Остановки
+                </a>
+                <a class="hero-link hero-link-events" href="#events">
+                    События
+                </a>
+                <a class="hero-link hero-link-merch" href="#merch">
+                    Мерч
+                </a>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="about-text">
+                <h2>
+                    ЧТО ТАКОЕ<br>
+                    <span>«ОСТАНОВКА»?</span>
+                </h2>
+                <p>
+                    «Остановка» — это курорт, <br>
+                    где не нужно выбирать один способ <br>
+                    отдыха. Здесь каждый маршрут ведёт <br>
+                    в своё состояние: к морю,<br>
+                    в горы, на спектакль, концерт<br>
+                    или в тихое место с книгой.
+                </p>
+                <a class="about-button" href="#how">
+                    Узнать больше -> 
+                </a>
+            </div>
+            <div class="about-image">
+                <img src="assets/images/about.png" alt="Остановка у моря">
+            </div>
+        </section>
+        <section class="how" id="how">
+            <h2 class="how-title">
+                КАК ЭТО <span>РАБОТАЕТ?</span>
+            </h2>
+            <p class="how-subtitle">
+                Четыре простых шага к отдыху, который нужен именно тебе.
+            </p>
+            <div class="how-steps">
+                <div class="how-step">
+                    <div class="step-number blue">1</div>
+                    <h3>Выбери остановку</h3>
+                    <p>
+                        Найди направление,<br>
+                        которое откликается<br>
+                        сейчас.
+                    </p>
+                </div>
+                <div class="how-step">
+                    <div class="step-number pink">2</div>
+                    <h3>Сядь на маршрут</h3>
+                    <p>
+                        Мы подскажем, что <br>
+                        посмотреть, послушать <br>
+                        и попробовать.
+                    </p>
+                </div>
+                <div class="how-step">
+                    <div class="step-number green">3</div>
+                    <h3>Переключись</h3>
+                    <p>
+                        Погрузись в атмосферу <br>
+                        и позволь себе другой<br>
+                        ритм.
+                    </p>
+                </div>
+                <div class="how-step">
+                    <div class="step-number yellow">4</div>
+                    <h3>Остановись</h3>
+                    <p>
+                        Почувствуй, как это —<br>
+                        быть здесь и сейчас.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="stops" id="stops">
+                <h2 class="stops-title">
+                    ВЫБЕРИ СВОЮ ОСТАНОВКУ
+                </h2>
+                <div class="stops-route">
+                    <svg class="route-wave" viewBox="0 0 1000 120" preserveAspectRatio="none">
+                        <path d="M 20 60
+                             C 120 20, 220 20, 320 60
+                             S 520 100, 620 60
+                             S 820 20, 980 60" />
+                    </svg>
+                    <div class="route-dot blue-dot dot-1"></div>
+                    <div class="route-dot green-dot dot-2"></div>
+                    <div class="route-dot pink-dot dot-3"></div>
+                    <div class="route-dot orange-dot dot-4"></div>
+                    <div class="route-dot yellow-dot dot-5"></div>
+                </div>
+                <div class="stops-cards">
+                    <div class="stop-card">
+                        <img src="assets/images/sea.png" alt="Море">
+                        <h3>МОРЕ</h3>
+                        <p>
+                            Солнце, вода и маршрут <br>
+                            без обратного билета.
+                        </p>
+                    </div>
+                    <div class="stop-card">
+                        <img src="assets/images/mointains.png" alt="Горы">
+                        <h3>ГОРЫ</h3>
+                        <p>
+                            Подняться выше привычного.
+                        </p>
+                    </div>
+                    <div class="stop-card">
+                        <img src="assets/images/theatre.png" alt="Театр">
+                        <h3>ТЕАТР</h3>
+                        <p>
+                            Истории, в которых
+                            можно стать кем-то другим.
+                        </p>
+                    </div>
+                    <div class="stop-card">
+                        <img src="assets/images/music.png" alt="Музыка">
+                        <h3>МУЗЫКА</h3>
+                        <p>
+                            Остановка, где всё
+                            звучит иначе.
+                        </p>
+                    </div>
+                    <div class="stop-card">
+                        <img src="assets/images/silence.png" alt="Тишина">
+                        <h3>ТИШИНА</h3>
+                        <p>
+                            Для тех, кому некуда
+                            спешить.
+                        </p>
+                    </div>
+                </div>
+        </section>
+        <section class="philosophy" id="philosophy">
+            <div class="philosophy-text">
+                <h2>
+                    ФИЛОСОФИЯ
+                    <span>ПРОЕКТА</span>
+                </h2>
+                <p>
+                    Мы верим, что отдых — это не пункт <br>
+                    назначения, а часть пути. Иногда нужно <br>
+                    свернуть с привычного маршрута, <br>
+                    чтобы услышать себя, вдохновиться, увидеть <br>
+                    новые горизонты и вернуться с новыми
+                    силами.
+                </p>
+                <div class="philosophy-slogan">
+                    <div class="slogan-line line-1">НЕ СПЕШИ.</div>
+                    <div class="slogan-line line-2">ВЫБИРАЙ.</div>
+                    <div class="slogan-line line-3">ОСТАНАВЛИВАЙСЯ.</div>
+                    <div class="slogan-underline"></div>
+                </div>
+            </div>
+            <div class="philosophy-image">
+                <img src="assets/images/philosophy.png" alt="Остановка у моря">
+            </div>
+        </section>
+        <section class="history" id="history">
+            <div class="history-top">
+                <h2 class="history-title">
+                    ИСТОРИЯ <br>
+                    
+                    <span>ПРОЕКТА</span>
+                </h2>
+                <p class="history-intro">
+                    Как простая мысль <br>
+                    превратилась в целую <br>
+                    карту направлений.
+                </p>
+            </div>
+            <div class="history-visual">
+                <svg class="history-route" viewBox="0 0 1000 150" preserveAspectRatio="none">
+                    <path d="M 20 80
+                         C 150 20, 250 130, 370 70
+                         S 600 30, 730 90
+                         S 880 120, 980 55" />
+                </svg>
+                <img src="assets/images/history.png" alt="История проекта">
+            </div>
+            <div class="history-texts">
+                <div class="history-item">
+                    <div class="history-number history-blue">01</div>
+                    <h3>Первая остановка</h3>
+                    <p>
+                        Всё началось с идеи:
+                        почему остановка не может
+                        стать местом отдыха?
+                    </p>
+                </div>
+                <div class="history-item">
+                    <div class="history-number history-pink">02</div>
+                    <h3>Первый маршрут</h3>
+                    <p>
+                        Так появилась остановка
+                        у моря — место, где дорога
+                        стала частью отдыха.
+                    </p>
+                </div>
+                <div class="history-item">
+                    <div class="history-number history-green">03</div>
+                    <h3>Новые направления</h3>
+                    <p>
+                        Потом появились горы,
+                        театр, музыка <br>
+                        и библиотека.
+                    </p>
+                </div>
+                <div class="history-item">
+                    <div class="history-number history-yellow">04</div>
+                    <h3>Сегодня</h3>
+                    <p>
+                        Теперь «Остановка» —
+                        это целая карта маршрутов,
+                        где каждый выбирает свой
+                        способ переключиться.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="events" id="events">
+            <div class="events-top">
+                <div class="events-heading">
+                    <h2>
+                        СОБЫТИЯ <br>
+        
+                        НА ОСТАНОВКАХ
+                    </h2>
+                    <p>
+                        Музыка на закате, книжные вечера, ночные показы и маршруты в горы. <br>
+                        Каждая остановка — это не только место, но и событие, <br>
+                        которое делает отдых особенным.
+                    </p>
+                </div>
+            </div>
+            <div class="events-cards">
+                <div class="event-card">
+                    <img src="assets/images/event-1.png" alt="Музыка на закате">
+                    <p class="event-date">12 АВГ</p>
+                    <h3>Музыка на закате</h3>
+                    <div class="event-tag tag-blue">
+                        МОРЕ
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="assets/images/event-2.png" alt="Летний спектакль">
+                    <p class="event-date">18 СЕН</p>
+                    <h3>Летний спектакль</h3>
+                    <div class="event-tag tag-pink">
+                        ТЕАТР
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="assets/images/event-3.png" alt="Книжный вечер">
+                    <p class="event-date">21 ОКТ</p>
+                    <h3>Книжный вечер</h3>
+                    <div class="event-tag tag-yellow">
+                        ТИШИНА
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="assets/images/event-4.png" alt="Поход в горы">
+                    <p class="event-date">27 НОЯ</p>
+                    <h3>Поход в горы</h3>
+                    <div class="event-tag tag-green">
+                        ГОРЫ
+                    </div>
+                </div>
+                <div class="event-card">
+                    <img src="assets/images/event-5.png" alt="Винил и закат">
+                    <p class="event-date">2 ДЕК</p>
+                    <h3>Винил и закат</h3>
+                    <div class="event-tag tag-pink">
+                        МУЗЫКА
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="merch" id="merch">
+            <div class="merch-text">
+                <h2>МЕРЧ</h2>
+                <div class="merch-line"></div>
+                <p>
+                    Маршруты, знаки и маленькие <br>
+                    воспоминания о путешествии — <br>
+                    теперь не только на остановках.
+                </p>
+                <h3>
+                    Забрать «Остановку» <br>
+                    с собой
+                </h3>
+            </div>
+            <div class="merch-image">
+                <img src="assets/images/merch.png" alt="Мерч проекта Остановка">
+            </div>
+        </section>
+        <section class="final-cta" id="final">
+            <div class="final-text">
+                <h2>
+                    <span class="final-title-first">БИЛЕТ ДО ОТДЫХА</span> <br>
+                    <span class="final-title-second">УЖЕ У ТЕБЯ</span>
+                </h2>
+                <p>
+                    Осталось только выбрать момент, <br>
+                    чтобы выйти из привычного маршрута <br>
+                    и отправиться в своё направление.
+                </p>
+                <div class="final-actions">
+                    <a class="final-button" href="#home">
+                        Начать маршрут →
+                    </a>
+                    <div class="final-note">
+                        следующая <br>
+        
+                        остановка <br>
+        
+                        уже рядом
+                    </div>
+                </div>
+            </div>
+            <div class="final-ticket">
+                <img src="assets/images/ticket.png" alt="Билет до отдыха">
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-brand">
+            <a class="footer-logo" href="#home">
+                <img src="assets/images/logo-footer.png" alt="Остановка 2">
+            </a>
+            <p>
+                Места, где можно ненадолго выйти <br>
+                из привычного маршрута.
+            </p>
+        </div>
+        <div class="footer-column">
+            <h3>О проекте</h3>
+            <a href="#stops">Остановки</a>
+            <a href="#events">События</a>
+            <a href="#merch">Мерч</a>
+        </div>
+        <div class="footer-column">
+            <h3>В путь</h3>
+            <a href="#home">Начать маршрут</a>
+            <a href="#events">Смотреть события</a>
+            <a href="#merch">Смотреть мерч</a>
+        </div>
+        <div class="footer-column">
+            <h3>Контакты</h3>
+            <a href="#">Telegram</a>
+            <a href="#">VK</a>
+            <a href="#">Email</a>
+        </div>
+        <div class="footer-slogan">
+            НЕ СПЕШИ. <br>
+            <span>ВЫБИРАЙ.</span> <br>
+            ОСТАНАВЛИВАЙСЯ. ★
+        </div>
+    </footer>
 </body>
 </html>
